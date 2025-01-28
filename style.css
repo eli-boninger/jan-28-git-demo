@@ -1,0 +1,107 @@
+* {
+    /* apply some styles to every element (least specific selector) */
+}
+
+/* element selector */
+h1 {
+    font-family: 'Comic Sans MS', Arial, Helvetica, sans-serif;
+}
+
+/* class selector */
+.blog-entry__photo {
+    max-width: 50%;
+}
+
+ul {
+    list-style-type: none;
+}
+
+header {
+    background-color: rgb(132, 39, 22);
+    color: white;
+    border: 8px dashed cyan;
+}
+
+button {
+    border-radius: 8px;
+    border-top-left-radius: 0;
+    background-color: white;
+}
+
+.posts__header {
+    color: red;
+}
+
+h2 {
+    color: blue;
+}
+
+/* select all paragraphs with the id "ul-blurb" */
+p#ul-blurb {
+    font-size: 72px;
+}
+
+/* select any element with id "ul-blurb" (but there should only ever be one) */
+#ul-blurb {
+    font-size: 32px;
+}
+
+/* select any h1 OR h2 OR ... h6 OR element with id "ul-blurb" */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+#ul-blurb {
+    margin: 0;
+}
+
+/* select all a tags with class nav__link */
+a.nav__link {
+    border-bottom: 4px solid white;
+    color: gray;
+}
+
+/* select all li that are direct children of a ul */
+ul>li {
+    text-decoration: underline;
+}
+
+/* select all p tags that are descendants of a footer tag */
+footer p {
+    font-size: 10px;
+}
+
+/* select any h3 that is a direct child of an article that is a direct child of a main */
+main>article>h3 {
+    color: purple;
+}
+
+/* select any p tag that directly follows an h3 tag as its sibling */
+h3+p {
+    text-transform: uppercase;
+}
+
+/* select all anchor tags where href value is "./" that are also direct children of a nav */
+nav>a[href="./"] {
+    border-top: 8px dotted blue;
+}
+
+/* apply these styles when the user hovers over a button */
+button:hover {
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+/* apply these styles when the user clicks on a button */
+button:active {
+    border-radius: 0;
+}
+
+/* apply these styles when someone focuses on an element with class "header" 
+that is a sibling following (directly or with other elements in between) an article tag */
+article~.header:focus {
+    border: 2px dotted black;
+    outline: none;
+}
